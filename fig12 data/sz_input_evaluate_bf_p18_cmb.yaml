@@ -1,0 +1,152 @@
+likelihood:
+  solike.SZLikelihood:
+    f_sky: 0.35443
+    sz_data_directory: /Users/boris/Work/CLASS-SZ/SO-SZ/Likelihoods_sz/solike/ymap/data/planck_2015_ymap/
+    trispectrum_directory: /Users/boris/Work/CLASS-SZ/SO-SZ/Likelihoods_sz/solike/ymap/chains/chains-X-rotti++20/sz_ps_completeness_analysis_diffuse-rotti++20-snr6-2h_step_5
+    trispectrum_ref: tSZ_trispectrum_ref_diffuse-rotti++20-snr6-2h_step_5.txt
+    ymap_ps_file: data_ps-ell-y2-erry2_diffuse-rotti++20.txt
+output: /Users/boris/Work/CLASS-SZ/SO-SZ/Likelihoods_sz/solike/ymap/chains/chains-X-rotti++20/sz_ps_completeness_analysis_diffuse-rotti++20-snr6-2h_step_5/diffuse-rotti++20-snr6-2h_step_5_bf_eval
+params:
+  A_CIB:
+    latex: A_\mathrm{CIB}
+    prior:
+      max: 5
+      min: 0
+    proposal: 0.16
+    ref:
+      dist: norm
+      loc: 0.66
+      scale: 0.16
+  A_IR:
+    latex: A_\mathrm{IR}
+    prior:
+      max: 5
+      min: 0
+    proposal: 0.18
+    ref:
+      dist: norm
+      loc: 2.04
+      scale: 0.18
+  A_RS:
+    latex: A_\mathrm{RS}
+    prior:
+      max: 5
+      min: 0
+    proposal: 0.34
+    ref:
+      dist: norm
+      loc: 0.004
+      scale: 0.34
+  B:
+    latex: B
+    prior:
+      max: 2.0
+      min: 1.0
+    proposal: 0.2
+    ref:
+      dist: norm
+      loc: 1.4
+      scale: 0.2
+  F_sz:
+    derived: 'lambda sigma8, Omega_m, B, H0: (sigma8/0.8)*(Omega_m/0.3)**0.35*(B/1.25)**-0.35*(H0/70.)**-0.20'
+    latex: F_\mathrm{sz}
+  H0:
+    latex: \tau_\mathrm{reio}
+    prior:
+      max: 90.0
+      min: 55.0
+    proposal: 0.6
+    ref:
+      dist: norm
+      loc: 67.27
+      scale: 0.6
+  Omega_m:
+    latex: \Omega_\mathrm{m}
+  n_s:
+    latex: n_\mathrm{s}
+    prior:
+      max: 1.0
+      min: 0.94
+    proposal: 0.0044
+    ref:
+      dist: norm
+      loc: 0.965
+      scale: 0.0044
+  omega_b:
+    latex: \Omega_\mathrm{b} h^2
+    prior:
+      max: 0.025
+      min: 0.02
+    proposal: 0.00015
+    ref:
+      dist: norm
+      loc: 0.0224
+      scale: 0.00015
+  omega_cdm:
+    latex: \Omega_\mathrm{c} h^2
+    prior:
+      max: 0.13
+      min: 0.11
+    proposal: 0.0014
+    ref:
+      dist: norm
+      loc: 0.1202
+      scale: 0.0014
+  sigma8:
+    latex: \sigma_8
+sampler:
+  evaluate:
+    override:
+      A_CIB: 0.0047084
+      A_IR: 1.4864
+      A_RS: 0.18704
+      B: 1.1979
+      H0: 66.893
+      n_s: 0.96426
+      omega_b: 0.022218
+      omega_cdm: 0.12105
+theory:
+  classy:
+    extra_args:
+      HMF_prescription_NCDM: CDM
+      M1SZ: 1e11
+      M2SZ: 1e16
+      N_ncdm: 1
+      N_ur: 0.00641
+      P_k_max_1/Mpc: 1
+      T_ncdm: 0.71611
+      append_name_trispectrum_ref: total-planck-collab-15_step_1
+      background_verbose: 0
+      component of tSZ power spectrum: diffuse
+      create reference trispectrum for likelihood code: 'NO'
+      deg_ncdm: 3
+      m_ncdm: 0.02
+      mass function: M500
+      mass_epsabs: 1.0e-40
+      mass_epsrel: 1.0e-06
+      multipoles_sz: P15
+      n_arraySZ: 15
+      ndimSZ: 50
+      non linear: halofit
+      output: tSZ_1h,tSZ_2h,tSZ_Trispectrum
+      path to reference trispectrum for likelihood code: /Users/boris/Work/CLASS-SZ/SO-SZ/Likelihoods_sz/solike/ymap/chains/sz_ps_completeness_analysis/
+      path_to_class: /Users/boris/Work/CLASS-SZ/SO-SZ/class_sz
+      perturbations_verbose: 0
+      pressure profile: A10
+      redshift_epsabs: 1.0e-40
+      redshift_epsrel: 1.0e-06
+      root: /Users/boris/Work/CLASS-SZ/SO-SZ/Likelihoods_sz/solike/ymap/chains/chains-X-rotti++20/sz_ps_completeness_analysis_diffuse-rotti++20-snr6-2h_step_5/diffuse-rotti++20-snr6-2h_step_5_bf_p18cmb_
+      sigma8: 0.81559
+      signal-to-noise cut-off for ps completeness analysis: 6
+      sz_verbose: 2
+      units for tSZ spectrum: dimensionless
+      write parameters: yeap
+      write sz results to files: 'yes'
+      z1SZ: 1e-5
+      z2SZ: 4.0
+      z_max_pk: 4.0
+    path: /Users/boris/Work/CLASS-SZ/SO-SZ/class_sz
+  solike.SZForegroundTheory:
+    foreground_data_directory: /Users/boris/Work/CLASS-SZ/SO-SZ/Likelihoods_sz/solike/ymap/data/planck_2015_ymap/
+    foreground_data_file: data_fg-ell-cib_rs_ir_cn-total-planck-collab-15.txt
+    speed: 2

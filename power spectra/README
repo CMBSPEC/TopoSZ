@@ -1,0 +1,23 @@
+The file SZ_and_fg_models_urc_snr6_fsky_0d35443.txt contains the data
+for the MCMC analysis using the cl^yy power spectrum measurement
+where all planck clusters with snr>6 have been masked, and foreground templates from Planck 2015.
+
+Columns are:
+1: multipole
+2: 10^12*l*(l+1)/2pi*cl^yy in dimensionless DT/T units
+3: 10^12*l*(l+1)/2pi*sigma_cl^yy (noise+sampling variance) in dimensionless DT/T units
+4: 10^12*l*(l+1)/2pi*cl^cib (template from Planck Collab 2015) in dimensionless DT/T units
+5: 10^12*l*(l+1)/2pi*cl^rs (template from Planck Collab 2015) in dimensionless DT/T units
+6: 10^12*l*(l+1)/2pi*cl^ir (template from Planck Collab 2015) in dimensionless DT/T units
+7: 10^12*l*(l+1)/2pi*cl^cn (template from Planck Collab 2015) in dimensionless DT/T units
+
+The files:
+- data_ps-ell-y2-erry2_urc_snr6_snr12_fsky_0d35443.txt
+- data_ps-ell-y2-erry2_urc_snr20_snr20_fsky_0d35443.txt
+contain the cl^yy power spectra here all planck clusters with snr>12 and snr>20 have been masked.
+The foreground templates for the MCMC analyses with these were the same as before, i.e., Planck 2015. 
+
+
+
+The relevant sky fraction is fsky = 0.35443 for all these spectrum.
+It is important for the normalisation of the non-diagonal part of the covmat (trispectrum).

@@ -1,0 +1,56 @@
+The 'Marginalized TSZ' points (black dots with error bars) are obtained by
+subtracting the foreground residuals from the y-map power spectrum measurement.
+
+In Figure 12, we chose to subtract the foreground as obtained in the TSZ-only analysis:
+TSZ only ACIB: 7.54722e-02 +/- 5.99398e-02
+TSZ only AIR: 1.80183e+00 +/- 4.03783e-01
+TSZ only ARS: 2.13806e-01 +/- 1.96956e-01
+
+One could chose to subtract the foreground as obtained in the TSZ+Planck analysis:
+TSZ+P18CMB ACIB: 4.5620e-02 +/- 2.8713e-02
+TSZ+P18CMB AIR: 1.5310e+00 +/- 1.0807e-01
+TSZ+P18CMB ARS: 1.8398e-01 +/- 1.0711e-01
+
+It is possible to compare the high-ell measurements with recent ACT and SPT points.
+These are given by:
+
+ACT result from Choi et al 2020 (https://arxiv.org/pdf/2007.07289.pdf)
+They report a tSZ power result at 150 GHz, where g(nu) = -0.957
+ACTCellnew = 5.29/(2.67)**2
+ACTCellnewerr =	0.66/(2.67)**2
+
+SPT result from Reichardt et al 2020 (https://arxiv.org/pdf/2002.06197.pdf)
+They report a tSZ power result at 143 GHz, where g(nu) = -1.044
+SPTCellnew = 3.42/(2.84)**2
+SPTCellnewerr = 0.54/(2.84)**2
+
+The denominator comes from the conversion to dimensionless y-units,
+i.e., dividing by Tcmb*g(nu).
+
+
+The best-fitting parameter values are:
+A_CIB: 0.0047084
+A_IR: 1.4864
+A_RS: 0.18704
+B: 1.1979
+H0: 66.893
+n_s: 0.96426
+omega_b: 0.022218
+omega_cdm: 0.12105
+
+The correlated noise amplitude is fixed to 0.9033 (set by high-ell power, see Bolliet++18)
+
+The other parameters and settings can be found in the file sz_input_evaluate_bf_p18_cmb.yaml
+
+The files:
+- szpowespectrum_measurement_urc_snr6_p18cmb_bf_fg_from_TSZ+P18_l_clyy_sigclyy_cib_ir_rs_cn.txt
+- szpowespectrum_measurement_urc_snr6_p18cmb_bf_fg_from_TSZonly_l_clyy_sigclyy_cib_ir_rs_cn.txt
+contain the 10^12*l*(l+1)/2pi*cl's in dimensionless DT/T units. The columns are as indicated in
+the end of the file names. The foreground curves are the same, computed with the best-fitting values,
+only the marginalised tSZ differs, as explained above.
+
+The file:
+- szpowespectrum_measurement_urc_snr6_p18cmb_best_fit_curve_l_cl1h_cl2h_cl1h+2h.txt
+contains the best-fitting TSZ power spectrum, columns are as indicated at the end of the file name and
+the spectra are 10^12*l*(l+1)/2pi*cl's in dimensionless DT/T units, for 1-halo, 2-halo and the sum,
+from l=2 to 40,000.
