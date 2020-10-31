@@ -65,5 +65,5 @@ from l=2 to 40,000.
 
 Finally, we provide a python script that produces the figure from all these data files.
 You can obtain a version of the figure by running:
-$ python solike/ymap/run_scripts/marginalized_tsz_from_TS+P18CM_analysis.py
-in a Terminal. 
+$ python marginalized_tsz_from_TSZ+P18CMB_analysis.py
+in a Terminal.
