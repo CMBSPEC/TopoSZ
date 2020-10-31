@@ -48,9 +48,22 @@ The files:
 contain the 10^12*l*(l+1)/2pi*cl's in dimensionless DT/T units. The columns are as indicated in
 the end of the file names. The foreground curves are the same, computed with the best-fitting values,
 only the marginalised tSZ differs, as explained above.
+The error 'sigcllyy' includes the diagonal element of the covariance matrix, including
+trispectrum contribution.
+
+The file:
+- tSZ_trispectrum_urc_snr6_sz+p18cmb_bf.txt
+is the trispectrum, so that the covmat is given by: covmat = trispectrum/f_sky/4/pi+ gaussian_part
+This trispectrum is computed for the best-fitting parameters of the TSZ+P18CMB analysis.
+
 
 The file:
 - szpowespectrum_measurement_urc_snr6_p18cmb_best_fit_curve_l_cl1h_cl2h_cl1h+2h.txt
 contains the best-fitting TSZ power spectrum, columns are as indicated at the end of the file name and
 the spectra are 10^12*l*(l+1)/2pi*cl's in dimensionless DT/T units, for 1-halo, 2-halo and the sum,
 from l=2 to 40,000.
+
+Finally, we provide a python script that produces the figure from all these data files.
+You can obtain a version of the figure by running:
+$ python solike/ymap/run_scripts/marginalized_tsz_from_TS+P18CM_analysis.py
+in a Terminal. 
