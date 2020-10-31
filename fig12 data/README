@@ -63,6 +63,12 @@ contains the best-fitting TSZ power spectrum, columns are as indicated at the en
 the spectra are 10^12*l*(l+1)/2pi*cl's in dimensionless DT/T units, for 1-halo, 2-halo and the sum,
 from l=2 to 40,000.
 
+
+The file:
+- planck_sz_1712_00788v1.txt
+contains the data from the 'total'/unmasked y-map power spectrum analysis of Bolliet, Comis, Komatsu, Macias-Perez (2018).
+
+
 Finally, we provide a python script that produces the figure from all these data files.
 You can obtain a version of the figure by running:
 $ python marginalized_tsz_from_TSZ+P18CMB_analysis.py
